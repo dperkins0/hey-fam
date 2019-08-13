@@ -1,0 +1,1 @@
+export const RSS_LINK = 'https://rss.acast.com/hey-fam'

@@ -1,0 +1,72 @@
+{
+  "name": "heyfam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Damien Perkins",
+  "scripts": {
+    "start": "NODE_ENV=development parcel src/index.html --log-level 4",
+    "build": "NODE_ENV=production parcel build src/index.html",
+    "test": "echo No tests yet"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.11",
+    "@material-ui/core": "^4.0.2",
+    "@material-ui/icons": "^4.2.1",
+    "@material-ui/styles": "^4.0.2",
+    "axios": "^0.19.0",
+    "core-js": "^3.2.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "regenerator-runtime": "^0.13.3",
+    "rss-parser": "^3.7.2",
+    "tipple": "^0.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-emotion": "^10.0.13",
+    "babel-plugin-transform-node-env-inline": "^0.4.3",
+    "eslint": "^6.1.0",
+    "eslint-config-problems": "^3.0.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "parcel-bundler": "^1.12.3"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "problems"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "globals": {
+      "React": true
+    },
+    "rules": {
+      "react/prop-types": "off"
+    },
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "react-hooks",
+      "react"
+    ]
+  },
+  "license": "ISC"
+}
