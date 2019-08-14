@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Parser from 'rss-parser'
-import { RSS_LINK } from '../constants'
+import Container from '@material-ui/core/Container'
+import Context from '../FeedContext'
 import Episode from './Episode'
+import Bar from './Bar'
+import { RSS_LINK } from '../constants'
 
 const parser = new Parser()
 
 const mapFeed = feed => {
-  return feed.map(item => <Episode key={item.guid} title={item.title} text={item.contentSnippet} />)
+  return feed.map(item => (
+    <Episode key={item.guid} title={item.title} text={item.contentSnippet} />
+  ))
 }
 
 const HeyFam = () => {
-  const [feed, setFeed] = useState()
+  const { feed, setFeed } = useContext(Context)
   useEffect(() => {
     async function parseFeed() {
       const feed = await parser.parseURL(RSS_LINK)
@@ -22,6 +27,11 @@ const HeyFam = () => {
     return <div>fetching</div>
   }
   console.log(feed)
-  return <div>{mapFeed(feed.items)}</div>
+  return (
+    <>
+      <Bar />
+      <Container>{mapFeed(feed.items)}</Container>
+    </>
+  )
 }
 export default HeyFam

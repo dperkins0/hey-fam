@@ -1,24 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import HeyFam from './components/HeyFam'
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import { createClient, TippleProvider } from 'tipple'
-
-const client = createClient({
-  fetchOptions: {
-    headers: {
-      'Content-Type': 'application/rss+xml',
-      'Access-Control-Allow-Origin': '*'
-    },
-  }
-})
+import HeyFam from './components/HeyFam'
+import { FeedProvider } from './FeedContext'
 
 const App = () => {
   return (
-    <TippleProvider client={client}>
+    <FeedProvider>
       <HeyFam />
-    </TippleProvider>
+    </FeedProvider>
   )
 }
 
