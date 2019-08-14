@@ -11,13 +11,18 @@ const useStyles = makeStyles({
   }
 })
 
+const parseText = text => {
+  return String(text).split(/(SUPPORT|SUBSCRIBE)/gm)[0].replace(/(&nbsp;)/g, ' ')
+}
+
 const Episode = ({ title, text }) => {
   const classes = useStyles()
+  const bodyText = parseText(text)
   return (
     <Card className={classes.card}>
       <CardContent>
         <Typography variant="h5">{title}</Typography>
-        <Typography variant="body2">{text}</Typography>
+        <Typography variant="body2">{bodyText}</Typography>
       </CardContent>
     </Card>
   )
