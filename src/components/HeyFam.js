@@ -10,7 +10,7 @@ const parser = new Parser()
 
 const mapFeed = feed => {
   return feed.map(item => (
-    <Episode key={item.guid} title={item.title} text={item.contentSnippet} />
+    <Episode key={item.guid} title={item.title} text={item.contentSnippet} date={item.pubDate} />
   ))
 }
 
