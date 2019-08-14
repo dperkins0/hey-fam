@@ -4,13 +4,19 @@ import Container from '@material-ui/core/Container'
 import Context from '../FeedContext'
 import Episode from './Episode'
 import Bar from './Bar'
+import { Placeholders } from './PlaceholderEpisode'
 import { RSS_LINK } from '../constants'
 
 const parser = new Parser()
 
 const mapFeed = feed => {
   return feed.map(item => (
-    <Episode key={item.guid} title={item.title} text={item.contentSnippet} date={item.pubDate} />
+    <Episode
+      key={item.guid}
+      title={item.title}
+      text={item.contentSnippet}
+      date={item.pubDate}
+    />
   ))
 }
 
@@ -23,14 +29,13 @@ const HeyFam = () => {
     }
     parseFeed()
   }, [])
-  if (feed === undefined) {
-    return <div>fetching</div>
-  }
   console.log(feed)
   return (
     <>
       <Bar />
-      <Container maxWidth="md">{mapFeed(feed.items)}</Container>
+      <Container maxWidth="md">
+        {feed === undefined ? <Placeholders /> : mapFeed(feed.items)}
+      </Container>
     </>
   )
 }
