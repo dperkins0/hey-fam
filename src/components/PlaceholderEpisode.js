@@ -3,7 +3,7 @@ import Skeleton from '@material-ui/lab/Skeleton'
 import styled from '@emotion/styled'
 
 const SkeletonContainer = styled.div({
-  margin: '32px 0px',
+  margin: '32px',
   height: '240px'
 })
 
