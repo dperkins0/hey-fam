@@ -6,9 +6,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { theme } from '../constants'
 
 const useStyles = makeStyles({
-  appbar: {
-    backgroundColor: theme.morningGlory
-  },
   text: {
     color: 'black'
   }
@@ -17,7 +14,7 @@ const useStyles = makeStyles({
 const Bar = () => {
   const classes = useStyles()
   return (
-    <AppBar className={classes.appbar} position="sticky">
+    <AppBar position="sticky">
       <Toolbar>
         <Typography className={classes.text}>Hey Fam..!</Typography>
       </Toolbar>

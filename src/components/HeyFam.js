@@ -30,7 +30,7 @@ const HeyFam = () => {
   return (
     <>
       <Bar />
-      <Container>{mapFeed(feed.items)}</Container>
+      <Container maxWidth="md">{mapFeed(feed.items)}</Container>
     </>
   )
 }
