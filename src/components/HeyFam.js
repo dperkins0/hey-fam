@@ -3,9 +3,8 @@ import Parser from 'rss-parser'
 import Container from '@material-ui/core/Container'
 import Context from '../FeedContext'
 import Episode from './Episode'
-import Bar from './Bar'
 import { Placeholders } from './PlaceholderEpisode'
-import { RSS_LINK } from '../constants'
+import { RSS_LINK, theme } from '../constants'
 
 const parser = new Parser()
 
@@ -31,12 +30,9 @@ const HeyFam = () => {
   }, [])
   console.log(feed)
   return (
-    <>
-      <Bar />
-      <Container maxWidth="md">
-        {feed === undefined ? <Placeholders /> : mapFeed(feed.items)}
-      </Container>
-    </>
+    <Container maxWidth="md">
+      {feed === undefined ? <Placeholders /> : mapFeed(feed.items)}
+    </Container>
   )
 }
 export default HeyFam

@@ -26,4 +26,5 @@ const App = () => {
 }
 
 const mountNode = document.getElementById('root')
+
 ReactDOM.render(<App />, mountNode)
