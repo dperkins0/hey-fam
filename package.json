@@ -6,7 +6,7 @@
   "author": "Damien Perkins",
   "scripts": {
     "start": "NODE_ENV=development parcel src/index.html --log-level 4",
-    "build": "NODE_ENV=production npm run clean && parcel build src/index.html && cp -a ./dist ./docs",
+    "build": "NODE_ENV=production npm run clean && parcel build src/index.html && cp -r ./dist/. ./docs",
     "clean": "rm -rf ./dist",
     "test": "echo No tests yet"
   },
