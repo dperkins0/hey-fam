@@ -14,10 +14,6 @@ const Title = styled.h4({
   fontFamily: 'Roboto Slab'
 })
 
-const EpisodeImage = styled.img({
-  width: '320px'
-})
-
 const Episode = ({ text, title, linkTo }) => {
   const bodyText = parseEpisodeText(text)
   return (

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
 import styled from '@emotion/styled'
-import { theme } from './constants'
 
 const StickyContainer = styled.div({
   position: 'sticky',
@@ -11,8 +10,8 @@ const StickyContainer = styled.div({
 const HeaderContainer = styled.header({
   display: 'flex',
   flexDirection: 'row',
-  backgroundColor: theme.secondary.main,
-  height: '40px',
+  backgroundColor: 'rgb(254, 255, 5)',
+  height: '48px',
   fontFamily: 'Roboto Slab, Helvetica, Arial, sans-serif',
   alignItems: 'center'
 })
