@@ -7,9 +7,9 @@ const mapFeed = feed => {
   return feed.map(item => (
     <Episode
       key={item.guid}
-      guid={item.guid}
       title={item.title}
       text={item.contentSnippet}
+      linkTo={`episode/${item.guid}`}
       date={item.pubDate}
     />
   ))
@@ -17,8 +17,8 @@ const mapFeed = feed => {
 
 const FeedContainer = styled.div({
   display: 'flex',
-  flexDirection: 'column',
-  padding: '24px 32px'
+  flexDirection: 'row',
+  flexWrap: 'wrap'
 })
 
 const Feed = () => {

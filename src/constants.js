@@ -3,7 +3,7 @@ export const RSS_LINK = 'https://rss.acast.com/hey-fam'
 export const theme = {
   primary: {
     light: '#c1e4e8',
-    main: '#9CD3DA',
+    main: '#9cd3da',
     dark: '#77c3cc'
   },
   secondary: {

@@ -7,11 +7,16 @@ import { RSS_LINK } from './constants'
 import Header from './Header'
 import Feed from './Feed'
 import SingleEpisode from './SingleEpisode'
+import Patreon from './Patreon'
 
 const Container = styled.div({
   width: '100%',
   minHeight: '100vh',
   margin: '0px auto'
+})
+
+const ContentContainer = styled.section({
+  padding: '16px 40px'
 })
 
 const parser = new Parser()
@@ -28,10 +33,13 @@ const HeyFam = () => {
   return (
     <Container>
       <Header />
-      <Router>
-        <Feed path="/" />
-        <SingleEpisode path="episode/:episodeGuid" />
-      </Router>
+      <ContentContainer>
+        <Router primary={false}>
+          <Feed path="/" />
+          <SingleEpisode path="episode/:episodeGuid" />
+          <Patreon path="patreon" />
+        </Router>
+      </ContentContainer>
     </Container>
   )
 }
