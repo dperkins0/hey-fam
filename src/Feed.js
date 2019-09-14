@@ -18,7 +18,8 @@ const mapFeed = feed => {
 const FeedContainer = styled.div({
   display: 'flex',
   flexDirection: 'row',
-  flexWrap: 'wrap'
+  flexWrap: 'wrap',
+  justifyContent: 'space-evenly'
 })
 
 const Feed = () => {
