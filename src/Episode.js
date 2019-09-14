@@ -8,7 +8,7 @@ const EpisodeContainer = styled.div({
   padding: '16px'
 })
 
-const Title = styled.div({
+const Title = styled.h4({
   fontFamily: 'Roboto Slab'
 })
 
