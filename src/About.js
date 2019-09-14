@@ -5,6 +5,7 @@ import logo from './logo.jpg'
 const AboutContainer = styled.section({
   display: 'flex',
   justifyContent: 'space-between',
+  alignItems: 'center',
   flexWrap: 'wrap',
   padding: '16px'
 })
@@ -20,12 +21,20 @@ const Logo = styled.img({
 const Description = styled.div({
   width: '320px'
 })
-const DescriptionText = styled.h3({})
+const DescriptionText = styled.h2({})
+
+const Highlighter = styled.mark({
+  backgroundColor: 'rgb(254, 255, 5)'
+})
 
 const Links = styled.ul({
-  width: '320px'
+  width: '320px',
+  listStyleType: 'circle'
 })
-const Link = styled.li({})
+
+const Link = styled.li({
+  margin: '16px 0px'
+})
 
 const About = () => {
   return (
@@ -34,8 +43,10 @@ const About = () => {
         <Logo src={logo} />
         <Description>
           <DescriptionText>
-            The only podcast in the universe featuring two white guys talking
-            about movies, tv and video games.
+            <Highlighter>
+              The only podcast in the universe featuring two white guys talking
+              about movies, tv and video games.
+            </Highlighter>
           </DescriptionText>
         </Description>
         <Links>
