@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Damien Perkins",
   "scripts": {
-    "start": "NODE_ENV=development parcel src/index.html --log-level 4",
+    "start": "NODE_ENV=development parcel src/index.html",
     "build": "NODE_ENV=production parcel build src/index.html && cp -r ./dist/. ./docs",
     "clean": "rm ./dist/* && rm ./docs/*",
     "format": "prettier-eslint --write \"src/**/*.js\"",
@@ -34,48 +34,13 @@
     "babel-plugin-emotion": "^10.0.17",
     "babel-plugin-transform-node-env-inline": "^0.4.3",
     "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
     "eslint-config-problems": "^3.0.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
-    "parcel-bundler": "^1.12.3"
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "problems"
-    ],
-    "env": {
-      "browser": true,
-      "es6": true
-    },
-    "globals": {
-      "React": true
-    },
-    "rules": {
-      "react/prop-types": "off"
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "parserOptions": {
-      "ecmaVersion": 8,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "plugins": [
-      "react-hooks",
-      "prettier"
-    ]
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2"
   },
   "license": "ISC"
 }

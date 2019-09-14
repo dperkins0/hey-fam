@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "react-hooks", "prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "problems",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "React": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.8.3"
+    }
+  },
+  "rules": {
+    "react/prop-types": "off"
+  }
+}
