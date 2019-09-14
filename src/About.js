@@ -4,7 +4,9 @@ import logo from './logo.jpg'
 
 const AboutContainer = styled.section({
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  flexWrap: 'wrap',
+  padding: '16px'
 })
 
 const Rule = styled.hr({
