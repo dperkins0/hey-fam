@@ -10,8 +10,13 @@
     {
       "src": "/small_hey-fam.png",
       "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/small_hey-fam.png",
+      "type": "image/png",
       "sizes": "192x192",
-      "purpose": "maskable any"
+      "purpose": "maskable"
     },
     {
       "src": "/big_hey-fam.png",
