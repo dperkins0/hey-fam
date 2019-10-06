@@ -37,7 +37,6 @@ const Header = () => {
       <HeaderContainer>
         <nav>
           <NavLink to="/">episodes</NavLink>
-          <NavLink to="patreon">patreon</NavLink>
         </nav>
       </HeaderContainer>
     </StickyContainer>

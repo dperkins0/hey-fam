@@ -40,7 +40,7 @@ const About = () => {
   return (
     <>
       <AboutContainer>
-        <Logo src={logo} />
+        <Logo src={logo} alt="hey fam logo" />
         <Description>
           <DescriptionText>
             <Highlighter>
