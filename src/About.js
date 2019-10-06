@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import logo from './logo.jpg'
 import { Link } from '@reach/router'
 import { mq } from './utils'
+import Links from './Links'
 
 const AboutContainer = styled.section`
   display: flex;
@@ -38,25 +39,12 @@ const Highlighter = styled.mark({
   backgroundColor: 'rgb(254, 255, 5)'
 })
 
-const Links = styled.ul`
-  width: 320px;
-  list-style-type: circle;
-  display: block;
-  ${mq({
-    display: ['none', 'block', 'block']
-  })}
-`
-
-const LinkItem = styled.li({
-  margin: '16px 0px'
-})
-
 const About = () => {
   return (
     <>
       <AboutContainer>
         <Link to="/">
-          <Logo src={logo} alt="hey fam logo" />
+          <Logo src={logo} alt="Hey Fam..! logo" />
         </Link>
         <Description>
           <DescriptionText>
@@ -66,35 +54,7 @@ const About = () => {
             </Highlighter>
           </DescriptionText>
         </Description>
-        <Links>
-          <LinkItem>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://patreon.com/heyfam"
-            >
-              patreon
-            </a>
-          </LinkItem>
-          <LinkItem>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.facebook.com/heyfampodcast"
-            >
-              facebook
-            </a>
-          </LinkItem>
-          <LinkItem>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.planetbroadcasting.com/our-shows/hey-fam/"
-            >
-              planet broadcasting
-            </a>
-          </LinkItem>
-        </Links>
+        <Links />
       </AboutContainer>
       <Rule />
     </>
