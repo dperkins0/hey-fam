@@ -49,7 +49,7 @@
     "inDev": true,
     "strategy": "default",
     "clearDist": true,
-		"swDest": "service-worker.js"
+    "swDest": "service-worker.js"
   },
   "license": "ISC"
 }

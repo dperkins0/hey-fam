@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { Router } from '@reach/router'
 import styled from '@emotion/styled'
+import axios from 'axios'
 import Parser from 'rss-parser'
 import Context from './FeedContext'
 import { RSS_LINK } from './constants'
@@ -25,13 +26,44 @@ const parser = new Parser()
 
 const HeyFam = () => {
   const { setFeed } = useContext(Context)
+
   useEffect(() => {
-    async function parseFeed() {
-      const feed = await parser.parseURL(RSS_LINK)
-      setFeed(feed)
+    const requestHeaders = new Headers({
+      Accept: 'application/rss+xml'
+    })
+
+    function fetchFeed() {
+      return axios
+        .get(RSS_LINK, {
+          method: 'get',
+          headers: requestHeaders
+        })
+        .then(response => {
+          return response.data
+        })
+        .catch(error => {
+          console.log('could not fetch feed: ', error)
+        })
     }
-    parseFeed()
+
+    function parseFeed(feed) {
+      return parser
+        .parseString(feed)
+        .then(parsedFeed => {
+          return parsedFeed
+        })
+        .catch(error => {
+          console.log('could not parse feed: ', error)
+        })
+    }
+
+    fetchFeed().then(feed => {
+      return parseFeed(feed).then(parsedFeed => {
+        setFeed(parsedFeed)
+      })
+    })
   }, [])
+
   return (
     <Container>
       <Header />
