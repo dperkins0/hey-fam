@@ -1,20 +1,21 @@
 {
-    "short_name": "Hey Fam..!",
-    "theme_color": "#9cd3da",
-    "background_color": "#9cd3da",
-    "display": "standalone",
-    "scope": "/",
-    "start_url": "/",
-    "icons": [
-        {
-          "src": "/small_hey-fam.jpg",
-          "type": "image/jpg",
-          "sizes": "192x192"
-        },
-        {
-          "src": "/big_hey-fam.jpg",
-          "type": "image/jpg",
-          "sizes": "512x512"
-        }
-      ]
-  }
+  "name": "Hey Fam..!",
+  "short_name": "Hey Fam..!",
+  "theme_color": "#9cd3da",
+  "background_color": "#9cd3da",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/small_hey-fam.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/big_hey-fam.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
