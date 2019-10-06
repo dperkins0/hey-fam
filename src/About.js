@@ -1,38 +1,53 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import logo from './logo.jpg'
+import { Link } from '@reach/router'
+import { mq } from './utils'
 
-const AboutContainer = styled.section({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-  padding: '16px'
-})
+const AboutContainer = styled.section`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px;
+  ${mq({
+    justifyContent: ['center', 'center', 'space-between']
+  })}
+`
 
 const Rule = styled.hr({
   border: '1px solid black'
 })
 
-const Logo = styled.img({
-  width: '320px'
-})
+const Logo = styled.img`
+  ${mq({
+    width: ['240px', '320px', '320px']
+  })}
+`
 
-const Description = styled.div({
-  width: '320px'
+const Description = styled.div`
+  width: 320px;
+  ${mq({
+    display: ['none', 'none', 'block']
+  })}
 })
+`
+
 const DescriptionText = styled.h2({})
 
 const Highlighter = styled.mark({
   backgroundColor: 'rgb(254, 255, 5)'
 })
 
-const Links = styled.ul({
-  width: '320px',
-  listStyleType: 'circle'
-})
+const Links = styled.ul`
+  width: 320px;
+  list-style-type: circle;
+  display: block;
+  ${mq({
+    display: ['none', 'block', 'block']
+  })}
+`
 
-const Link = styled.li({
+const LinkItem = styled.li({
   margin: '16px 0px'
 })
 
@@ -40,7 +55,9 @@ const About = () => {
   return (
     <>
       <AboutContainer>
-        <Logo src={logo} alt="hey fam logo" />
+        <Link to="/">
+          <Logo src={logo} alt="hey fam logo" />
+        </Link>
         <Description>
           <DescriptionText>
             <Highlighter>
@@ -50,7 +67,7 @@ const About = () => {
           </DescriptionText>
         </Description>
         <Links>
-          <Link>
+          <LinkItem>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -58,8 +75,8 @@ const About = () => {
             >
               patreon
             </a>
-          </Link>
-          <Link>
+          </LinkItem>
+          <LinkItem>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -67,8 +84,8 @@ const About = () => {
             >
               facebook
             </a>
-          </Link>
-          <Link>
+          </LinkItem>
+          <LinkItem>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -76,7 +93,7 @@ const About = () => {
             >
               planet broadcasting
             </a>
-          </Link>
+          </LinkItem>
         </Links>
       </AboutContainer>
       <Rule />
