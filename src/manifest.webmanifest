@@ -8,21 +8,14 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/small_hey-fam.png",
+      "src": "/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/small_hey-fam.png",
+      "src": "/android-chrome-512x512.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/big_hey-fam.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "maskable any"
+      "sizes": "512x512"
     }
   ]
 }

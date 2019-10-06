@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import logo from './logo.jpg'
+import logo from './hey-fam.png'
 import { Link } from '@reach/router'
 import { mq } from './utils'
 import Links from './Links'
