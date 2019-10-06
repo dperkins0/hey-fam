@@ -6,7 +6,7 @@
   "author": "Damien Perkins",
   "scripts": {
     "start": "NODE_ENV=development parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "dist": "parcel build src/index.html",
     "clean": "rm ./dist/*",
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "test": "echo No tests yet"
