@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Damien Perkins",
   "scripts": {
-    "start": "NODE_ENV=development parcel src/index.html",
+    "start": "parcel src/index.html",
     "dist": "parcel build src/index.html",
     "clean": "rm ./dist/*",
     "format": "prettier-eslint --write \"src/**/*.js\"",
@@ -40,7 +40,16 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.1.2",
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-sw-cache": "^0.3.1",
     "prettier": "^1.18.2"
+  },
+  "cache": {
+    "disablePlugin": false,
+    "templatedUrls": "undefined",
+    "inDev": true,
+    "strategy": "default",
+    "clearDist": true,
+		"swDest": "service-worker.js"
   },
   "license": "ISC"
 }
