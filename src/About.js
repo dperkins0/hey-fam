@@ -33,6 +33,12 @@ const Description = styled.div`
 })
 `
 
+const LinksContainer = styled.div`
+  ${mq({
+    display: ['none', 'none', 'block']
+  })}
+`
+
 const DescriptionText = styled.h2({})
 
 const Highlighter = styled.mark({
@@ -54,7 +60,9 @@ const About = () => {
             </Highlighter>
           </DescriptionText>
         </Description>
-        <Links />
+        <LinksContainer>
+          <Links />
+        </LinksContainer>
       </AboutContainer>
       <Rule />
     </>

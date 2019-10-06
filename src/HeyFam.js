@@ -9,6 +9,7 @@ import Feed from './Feed'
 import SingleEpisode from './SingleEpisode'
 import Patreon from './Patreon'
 import About from './About'
+import Links from './Links'
 
 const Container = styled.div({
   width: '100%',
@@ -40,6 +41,7 @@ const HeyFam = () => {
           <Feed path="/" />
           <SingleEpisode path="episode/:episodeGuid" />
           <Patreon path="patreon" />
+          <Links path="links" />
         </Router>
       </ContentContainer>
     </Container>
