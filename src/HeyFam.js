@@ -9,6 +9,7 @@ import Header from './Header'
 import Feed from './Feed'
 import SingleEpisode from './SingleEpisode'
 import Patreon from './Patreon'
+import Headline from './Headline'
 import About from './About'
 import Links from './Links'
 
@@ -67,11 +68,12 @@ const HeyFam = () => {
   return (
     <Container>
       <Header />
-      <About />
+      <Headline />
       <ContentContainer>
         <Router primary={false}>
           <Feed path="/" />
           <SingleEpisode path="episode/:episodeGuid" />
+          <About path="about" />
           <Patreon path="patreon" />
           <Links path="links" />
         </Router>
