@@ -12,17 +12,21 @@ const Angus = styled.div({})
 
 const SocialLink = styled.a({})
 
-const Name = styled.h3({})
+const Description = styled.p({})
+
+const Name = styled.h3({
+  fontFamily: 'Roboto Slab, Helvetica, Arial, sans-serif'
+})
 
 const About = () => {
   return (
     <AboutContainer>
       <Levins>
         <Name>Andrew Levins</Name>
-        <p>
+        <Description>
           DAD / DJ / WRITER / PODCAST GUY ~~~~~~~~ Host of Hey Fam, All The
           Small Games and Serious Issues.
-        </p>
+        </Description>
         <SocialLink
           href="https://twitter.com/levdawg"
           target="_blank"
@@ -33,7 +37,7 @@ const About = () => {
       </Levins>
       <Angus>
         <Name>Angus Truskett</Name>
-        <p>assassin type</p>
+        <Description>assassin type</Description>
         <SocialLink
           href="https://twitter.com/chimichangus"
           target="_blank"
