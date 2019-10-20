@@ -23,8 +23,7 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "regenerator-runtime": "^0.13.3",
-    "rss-parser": "^3.7.2",
-    "tipple": "^0.6.0"
+    "rss-parser": "^3.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
