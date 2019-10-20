@@ -20,7 +20,7 @@ const FeedContainer = styled.div({
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',
-  justifyContent: 'space-evenly'
+  justifyContent: 'space-between'
 })
 
 const LoaderContainer = styled.div({

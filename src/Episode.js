@@ -6,12 +6,13 @@ import { parseEpisodeText } from './utils'
 const EpisodeContainer = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  width: '320px',
+  width: '280px',
   margin: '24px'
 })
 
 const Title = styled.h4({
-  fontFamily: 'Roboto Slab'
+  fontFamily: 'Roboto Slab',
+  textDecoration: 'underline'
 })
 
 const Episode = ({ text, title, linkTo }) => {
