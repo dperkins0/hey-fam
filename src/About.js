@@ -6,11 +6,18 @@ const AboutContainer = styled.div({
   flexDirection: 'column'
 })
 
+const LinksContainer = styled.div({
+  display: 'flex',
+  flexDirection: 'column'
+})
+
 const Levins = styled.div({})
 
 const Angus = styled.div({})
 
-const SocialLink = styled.a({})
+const SocialLink = styled.a({
+  margin: '16px 0px'
+})
 
 const Description = styled.p({})
 
@@ -27,24 +34,49 @@ const About = () => {
           DAD / DJ / WRITER / PODCAST GUY ~~~~~~~~ Host of Hey Fam, All The
           Small Games and Serious Issues.
         </Description>
-        <SocialLink
-          href="https://twitter.com/levdawg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          twitter
-        </SocialLink>
+        <LinksContainer>
+          <SocialLink
+            href="https://twitter.com/levdawg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            twitter
+          </SocialLink>
+          <SocialLink
+            href="https://instagram.com/levdawg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            instagram
+          </SocialLink>
+          <SocialLink
+            href="http://yolevins.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            yo levins
+          </SocialLink>
+        </LinksContainer>
       </Levins>
       <Angus>
         <Name>Angus Truskett</Name>
         <Description>assassin type</Description>
-        <SocialLink
-          href="https://twitter.com/chimichangus"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          twitter
-        </SocialLink>
+        <LinksContainer>
+          <SocialLink
+            href="https://twitter.com/chimichangus"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            twitter
+          </SocialLink>
+          <SocialLink
+            href="https://instagram.com/chimichangus"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            instagram
+          </SocialLink>
+        </LinksContainer>
       </Angus>
     </AboutContainer>
   )
