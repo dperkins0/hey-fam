@@ -16,7 +16,7 @@ const Styles = () => {
           background-position: bottom right;
           background-repeat: no-repeat;
           background-attachment: fixed;
-          background-size: 20%;
+          background-size: 30%;
         }
       `}
     />

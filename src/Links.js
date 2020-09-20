@@ -5,7 +5,6 @@ import Backlink from './Backlink'
 import BodyText from './BodyText'
 
 const LinkContainer = styled.ul`
-  width: 320px;
   list-style-type: circle;
 `
 
