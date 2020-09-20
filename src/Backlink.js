@@ -5,8 +5,9 @@ import { theme } from './constants'
 
 const NavLink = styled(Link)({
   fontFamily: "'Rubik', sans-serif",
-  fontSize: '16vw',
-  color: theme.secondary.dark
+  fontSize: '8vw',
+  color: theme.secondary.dark,
+  marginRight: '16px'
 })
 
 const Backlink = () => {

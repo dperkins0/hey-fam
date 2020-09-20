@@ -6,12 +6,12 @@ import { theme } from './constants'
 const LinkContainer = styled.nav({
   display: 'flex',
   flexDirection: 'column',
-  width: '100%',
   fontFamily: "'Rubik', sans-serif"
 })
 
 const NavLink = styled(Link)({
-  fontSize: '16vw',
+  fontSize: '10vw',
+  color: 'black',
   ':hover': {
     color: theme.secondary.dark
   }

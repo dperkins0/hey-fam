@@ -8,8 +8,6 @@ import About from './About'
 import Links from './Links'
 
 const Container = styled.section({
-  width: '100%',
-  minHeight: '100vh',
   margin: '0px auto',
   padding: '16px 24px'
 })

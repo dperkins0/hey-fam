@@ -10,12 +10,13 @@ const Styles = () => {
         ${emotionNormalize}
         body {
           background-color: rgb(140, 213, 220);
-          font-family: Garamond, 'Times New Roman', serif;
+          font-family: 'Roboto Slab', Helvetica, Arial, sans-serif,
           overflow-x: hidden;
           background-image: url(${HeyFam});
           background-position: bottom right;
           background-repeat: no-repeat;
           background-attachment: fixed;
+          background-size: 20%;
         }
       `}
     />

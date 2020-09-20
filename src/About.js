@@ -12,15 +12,16 @@ const LinksContainer = styled.div({
 })
 
 const HostsContainer = styled.section({
-  display: 'flex'
+  display: 'flex',
+  flexDirection: 'column'
 })
 
 const Levins = styled.article({
-  width: '50%'
+  width: '60%'
 })
 
 const Angus = styled.article({
-  width: '50%'
+  width: '60%'
 })
 
 const SocialLink = styled.a({
@@ -72,7 +73,7 @@ const About = () => {
           </Levins>
           <Angus>
             <Name>Angus Truskett</Name>
-            <Description>assassin type</Description>
+            <Description>assassin type & former abductee</Description>
             <LinksContainer>
               <SocialLink
                 href="https://twitter.com/chimichangus"
