@@ -1,27 +1,22 @@
 import React from 'react'
-import { Link } from '@reach/router'
 import styled from '@emotion/styled'
-import { parseEpisodeText } from './utils'
 
 const EpisodeContainer = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-  width: '280px',
   margin: '24px'
 })
 
-const Title = styled.h4({
+const Title = styled.a({
   fontFamily: 'Roboto Slab',
-  textDecoration: 'underline'
+  textDecoration: 'underline',
+  fontSize: '4vw'
 })
 
-const Episode = ({ text, title, linkTo }) => {
-  const bodyText = parseEpisodeText(text)
+const Episode = ({ title, link }) => {
   return (
     <EpisodeContainer>
-      <Title>{title}</Title>
-      {bodyText}
-      {linkTo && <Link to={linkTo}>link</Link>}
+      <Title target="_blank" rel="noopener noreferrer" href={link}>
+        {title}
+      </Title>
     </EpisodeContainer>
   )
 }

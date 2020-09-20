@@ -6,21 +6,14 @@ import Loader from './Loader'
 
 const mapFeed = feed => {
   return feed.map(item => (
-    <Episode
-      key={item.guid}
-      title={item.title}
-      text={item.contentSnippet}
-      linkTo={`episode/${item.guid}`}
-      date={item.pubDate}
-    />
+    <Episode key={item.guid} title={item.title} link={item.link} />
   ))
 }
 
 const FeedContainer = styled.div({
   display: 'flex',
-  flexDirection: 'row',
-  flexWrap: 'wrap',
-  justifyContent: 'space-between'
+  flexDirection: 'column',
+  width: '100%'
 })
 
 const LoaderContainer = styled.div({
