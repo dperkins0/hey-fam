@@ -1,23 +1,36 @@
 {
-  "name": "Hey Fam..!",
-  "short_name": "Hey Fam..!",
   "theme_color": "#9cd3da",
   "background_color": "#9cd3da",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
+  "name": "Hey Fam..!",
+  "app_name": "Hey Fam..!",
+  "short_name": "Hey Fam..!",
   "icons": [
-    {
-      "src": "/android-chrome-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "maskable any"
-    }
+      {
+          "src": "/icon-192x192.png",
+          "sizes": "192x",
+          "type": "image/png",
+          "purpose": "maskable any"
+      },
+      {
+          "src": "/icon-256x256.png",
+          "sizes": "256x",
+          "type": "image/png",
+          "purpose": "maskable any"
+      },
+      {
+          "src": "/icon-384x384.png",
+          "sizes": "384x",
+          "type": "image/png",
+          "purpose": "maskable any"
+      },
+      {
+          "src": "/icon-512x512.png",
+          "sizes": "512x",
+          "type": "image/png",
+          "purpose": "maskable any"
+      }
   ]
 }
