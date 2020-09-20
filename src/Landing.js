@@ -10,7 +10,7 @@ const LinkContainer = styled.nav({
 })
 
 const NavLink = styled(Link)({
-  fontSize: '10vw',
+  fontSize: '10vmax',
   color: 'black',
   ':hover': {
     color: theme.secondary.dark
