@@ -15,6 +15,7 @@ const Styles = () => {
           background-image: url(${HeyFam});
           background-position: bottom right;
           background-repeat: no-repeat;
+          background-attachment: fixed;
         }
       `}
     />
