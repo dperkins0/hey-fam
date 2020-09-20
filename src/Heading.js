@@ -4,7 +4,7 @@ import { theme } from './constants'
 
 const HeadingElement = styled.h1({
   fontFamily: "'Rubik', sans-serif",
-  fontSize: '10vw',
+  fontSize: '10vmax',
   color: theme.secondary.dark,
   margin: '0.2rem 0'
 })
