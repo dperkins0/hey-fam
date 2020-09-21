@@ -2,11 +2,11 @@ import React from 'react'
 import Feed from './Feed'
 import Heading from './Heading'
 import Backlink from './Backlink'
-import { useAcastFeed, usePatreonFeed } from './hooks'
+import { useAcastFeed } from './hooks'
 
 const Episodes = () => {
   const acastFeed = useAcastFeed()
-  const patreonFeed = usePatreonFeed()
+  const patreonFeed = []
 
   return (
     <>
